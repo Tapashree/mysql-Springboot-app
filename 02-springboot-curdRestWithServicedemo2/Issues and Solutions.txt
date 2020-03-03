@@ -1,0 +1,18 @@
+1) Issue With Spring: There was an unexpected error (type=Not Found, status=404):
+
+Ans: Spring will automatically load controllers that are in the same package or sub-packages, for example:
+	com.organization_name.webservices.application
+	com.organization_name.webservices.application.controllers
+But not 
+com.organization_name.webservices.controllers
+
+So make sure the package names are in structured way.S
+
+2) POM file giving error symbol in eclipse. 
+Ans.
+	a. If POM gives error in Eclipse add on the below maven plugin in properties in POM.xml
+<properties>
+		<java.version>1.8</java.version>
+		<maven-jar-plugin.version>3.1.1</maven-jar-plugin.version>
+	</properties>
+	b. Maven  -- Update Project
